@@ -1,0 +1,74 @@
+*{
+    margin: 0px;
+    padding: 0%;
+}
+.one {
+    background-color: darkgreen;
+
+}
+.one .conatiner{
+    background-color: darkgreen;
+}
+.one .venue{
+    margin: 275px 20px 10px 40px; /* margin Top Right Bottom Left */
+    /* margin: 10px 40px;  Top and Bottom, Right and left*/
+}
+.one h1{
+    font-size: 72px;
+    margin: 0px 0px 0px 70px;
+    width: fit-content;
+    color: white;
+} 
+.one h3{
+    margin: 0px 0px 0px 70px;
+    font-size: 25px;
+    color: white;
+    
+}
+.one img{
+    float: right;
+  margin: 0 0 300 0;
+  width: 40%;
+  height: 620px;
+}
+.one .cont{
+    text-align: right;
+}
+.one input{
+    margin: 30px 0px 10px 70px;
+    font-size: 25px;
+    background-color: yellow;
+    color: black ;
+    font-weight: bold;
+    border-radius: 50px;
+}
+.one p{
+    margin-left: 30px;
+    font-size: 30px;
+    color: white;
+}
+.two{
+    background-color: rgb(8, 55, 55);
+}
+.two h1{
+    font-size: 79px;
+ max-width: 45%;
+    float: left;
+    margin: 5% 0% 5% 5%; 
+    color: white;
+}
+.two h3{
+    font-size:20px ;
+    float: right;
+    max-width: 25%;
+     margin: 7% 21% 0% 0%; 
+     color: white;
+}
+.two img{
+    width: 90%; 
+    text-align: center;
+    margin: 10px 70px 30px 70px ;
+    height: 300px;
+}
+Footer
+© 2022 GitHub, Inc.
