@@ -1,0 +1,22 @@
+.item1 { grid-area: header; }
+.item2 { grid-area: content; }
+.item3 { grid-area: side; }
+.item4 {grid-area: footer;}
+
+.grid-container {
+display: grid;
+grid-template-areas:
+'header header header '
+'content content side'
+'footer footer footer ';
+gap: 10px;
+background-color: rgb(205, 195, 11);
+padding: 10px;
+}
+
+.grid-container > div {
+background-color: rgba(12, 139, 243, 0.999);
+text-align: center;
+padding: 20px 0;
+font-size: 30px;
+}
