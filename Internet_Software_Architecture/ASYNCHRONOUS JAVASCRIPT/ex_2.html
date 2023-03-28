@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function arrayManipulation(numbers, operationCallback, filterCallback) {
+    const result = numbers.map(operationCallback).filter(filterCallback);
+    return result;
+    }
+    
+    // Define the operation and filter callbacks
+    const square = x => x * x;
+    const isEven = x => x % 2 === 0;
+    const isPositive = x => x > 0;
+    const double = x => x * 2;
+    
+    // Define an array of numbers
+    const numbers = [1, -2, 3, 4, -5];
+    
+    // Use the arrayManipulation function to perform different operations and filters
+    const squaredEvens = arrayManipulation(numbers, square, isEven);
+    const positiveDoubles = arrayManipulation(numbers, double, isPositive);
+    
+    console.log('Squared evens:', squaredEvens); // [4, 16]
+    console.log('Positive doubles:', positiveDoubles); // [2, 6, 8]
+  
+    </script>
+</body>
+</html>
