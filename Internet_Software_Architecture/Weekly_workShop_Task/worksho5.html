@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<div id="section"></div>
+<script>
+const id = prompt("Enter an ID number:");
+
+const url = `https://jsonplaceholder.typicode.com/photos/${id}`;
+
+fetch(url)
+.then(res => res.json())
+.then(data => {
+const img = document.createElement('img');
+img.src = data.url;
+section.appendChild(img);
+})
+.catch(error => {
+console.error(error);
+alert('Failed to load image. Please check the ID number and try again.');
+});
+</script>
+</body>
+</html>
