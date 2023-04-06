@@ -34,29 +34,19 @@ async function checkWeather(city){
 
             console.log(data);
 
-            const options = { month: 'short', day: 'numeric', year: 'numeric' };
+            const options = { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' };
             document.querySelector(".date").innerHTML = new Date().toLocaleDateString('en-US', options);
             document.querySelector(".temp").innerHTML = data.main.temp + "&deg;C";
             document.querySelector(".city").innerHTML = data.name + ", " + data.sys.country;
             document.querySelector(".pressure").innerHTML = data.main.pressure;
             document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
             document.querySelector(".wind").innerHTML = data.wind.speed + " Km/h";
+            document.querySelector(".ic").innerHTML = data.weather[0].description;
 
-            if(data.weather[0].main == "Clouds"){
-                weatherIcon.src = "img/clouds.png";
-            }
-            else if(data.weather[0].main == "Clear"){
-                weatherIcon.src = "img/clear.png";
-            }
-            else if(data.weather[0].main == "Rain"){
-                weatherIcon.src = "img/rain.png";
-            }
-            else if(data.weather[0].main == "Drizzle"){
-                weatherIcon.src = "img/drizzle.png";
-            }
-            else if(data.weather[0].main == "Mist"){
-                weatherIcon.src = "img/mist.png";
-            }
+            const iconCode = data.weather[0].icon;
+            const iconUrl = "https://openweathermap.org/img/w/" + iconCode + ".png";
+            weatherIcon.src = iconUrl;
+
             document.querySelector(".error").style.display = "none";
         }
     } catch (error) {
